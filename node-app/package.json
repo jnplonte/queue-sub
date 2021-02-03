@@ -1,0 +1,33 @@
+{
+  "name": "queque-subscriber",
+  "description": "queque subscriber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "keywords": [],
+  "author": "john paul onte <jnpl.onte@gmail.com>",
+  "license": "MIT",
+  "quokka": {
+    "babel": true
+  },
+  "scripts": {
+    "build:production": "concurrently \"tsc --project ./src/tsconfig.app.json\" \"npm run generate:config\"",
+    "build:development": "concurrently \"tsc --project ./tsconfig.json\" \"npm run generate:config\"",
+    "generate:config": "copyfiles -u 1 ./src/config/*.json ./dist",
+    "start": "concurrently \"tsc --watch\" \"nodemon ./dist/index.js\"",
+    "start:server": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "jnpl-helper": "^1.5.19",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "concurrently": "^5.3.0",
+    "copyfiles": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "nodemon": "^2.0.4",
+    "tslint": "^6.1.3"
+  }
+}

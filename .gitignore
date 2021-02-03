@@ -1,0 +1,56 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
+
+# dependencies
+node_modules
+_back
+artifacts
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/connect.lock
+/coverage
+npm-debug.log
+/typings
+
+/src/config/rabbit-config.json
+src/config/rabbit-config.json
+/node-app/src/config/rabbit-config.json
+node-app/src/config/rabbit-config.json
+
+# System Files
+.DS_Store
+.nyc_output
+Thumbs.db
+report-err.log
+report-out.log
+pm2-error*
+pm2-output*
+
+test.js
+test.ts
+
+node-app/node_modules
+node-app/dist
+node-app/app.env
+node-app/app.ini
