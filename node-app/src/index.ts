@@ -53,7 +53,7 @@ amqp.connect(`${rabbitConfig.host}:${rabbitConfig.port}`, (error0, connection) =
                 'additionalData.receivedAt': new Date()
             };
 
-            queueLogs.update(msg.properties.headers.token || '', msgContent.logId || '', updatedData)
+            return queueLogs.update(msg.properties.headers.token || '', msgContent.logId || '', updatedData)
                 .then(
                     (queueLogData) => {
                         console.log('Message Confimation Receive %s', helper.toString(queueLogData));
