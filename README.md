@@ -6,7 +6,7 @@
 **v1.0.0**
 
 
-### Dependencies
+## Dependencies
 * nodejs: [https://nodejs.org/](https://nodejs.org/en/)
 * rabbitmq: [https://www.rabbitmq.com/](https://www.rabbitmq.com/)
 * docker: [https://www.docker.com/](https://www.docker.com/)
