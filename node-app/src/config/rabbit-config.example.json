@@ -1,20 +1,20 @@
 {
-    "local": {
-        "host": "amqp://rabit.wawhub.net",
-        "port": "5672",
-        "username": "",
-        "password": ""
-    },
-    "development": {
-        "host": "amqp://rabit.wawhub.net",
-        "port": "5672",
-        "username": "",
-        "password": ""
-    },
-    "production": {
-        "host": "",
-        "port": "",
-        "username": "",
-        "password": ""
-    }
+	"local": {
+		"host": "amqp://rabit.wawhub.net",
+		"port": "5672",
+		"username": "",
+		"password": ""
+	},
+	"development": {
+		"host": "amqp://rabit.wawhub.net",
+		"port": "5672",
+		"username": "",
+		"password": ""
+	},
+	"production": {
+		"host": "",
+		"port": "",
+		"username": "",
+		"password": ""
+	}
 }
