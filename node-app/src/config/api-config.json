@@ -9,11 +9,11 @@
 		"defaults": {}
 	},
 	"development": {
-		"host": "",
+		"host": "http://138.68.62.198",
 		"port": 8082,
 		"endpoints": {
-			"queueLogs": "",
-			"coupons": ""
+			"queueLogs": "http://138.68.62.198:8081/v1/core/queuelogs/{{logId}}",
+			"coupons": "http://138.68.62.198:8081/v1/core/coupons/{{couponId}}"
 		},
 		"defaults": {}
 	},
