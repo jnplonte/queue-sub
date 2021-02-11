@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Helper } from '../helper/helper.service';
 
-export class QueueLogs {
+export class Coupons {
 	helper: Helper;
 
 	logUrls = {};
@@ -12,8 +12,8 @@ export class QueueLogs {
 		this.logUrls = this.config.api[this.env]['endpoints'];
 	}
 
-	update(token: string, logId: string, data: any = {}): Promise<any> {
-		const finalUrl: string = this.helper.replaceHtml(this.logUrls['queueLogs'], { logId: logId });
+	update(token: string, couponId: string, data: any = {}): Promise<any> {
+		const finalUrl: string = this.helper.replaceHtml(this.logUrls['coupons'], { couponId: couponId });
 
 		return axios
 			.put(finalUrl, data, {

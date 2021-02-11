@@ -1,28 +1,29 @@
 {
-  "local": {
-    "host": "http://localhost",
-    "port" : 8082,
-    "endpoints": {
-      "queueLogs": "http://localhost:8081/v1/core/queuelogs/{{logId}}"
-    },
-    "defaults": {
-
-    }
-  },
-  "development": {
-    "host": "",
-    "port": 8082,
-    "endpoints": {
-      "queueLogs": ""
-    },
-    "defaults": {}
-  },
-  "production": {
-    "host": "",
-    "port": 8082,
-    "endpoints": {
-      "queueLogs": ""
-    },
-    "defaults": {}
-  }
+	"local": {
+		"host": "http://localhost",
+		"port": 8082,
+		"endpoints": {
+			"queueLogs": "http://localhost:8081/v1/core/queuelogs/{{logId}}",
+			"coupons": "http://localhost:8081/v1/core/coupons/{{couponId}}"
+		},
+		"defaults": {}
+	},
+	"development": {
+		"host": "",
+		"port": 8082,
+		"endpoints": {
+			"queueLogs": "",
+			"coupons": ""
+		},
+		"defaults": {}
+	},
+	"production": {
+		"host": "",
+		"port": 8082,
+		"endpoints": {
+			"queueLogs": "",
+			"coupons": ""
+		},
+		"defaults": {}
+	}
 }
