@@ -65,13 +65,17 @@ amqp.connect(`${rabbitConfig.host}:${rabbitConfig.port}`, (error0, connection) =
 				.then((queueLogData) => {
 					console.log('Message Confimation Received %s', helper.toString(queueLogData));
 
+					if (!msgContent.data || !msgContent.data.couponId || !msgContent.data.hederaData) {
+						return Promise.resolve('');
+					}
+
 					const hederaData: object = {
 						additionalData: msgContent.data.hederaData || {},
 					};
 					return coupons.update(msg.properties.headers.token || '', msgContent.data.couponId || '', hederaData);
 				})
 				.then((couponData) => {
-					console.log('Coupon Data Updated %s', helper.toString(couponData));
+					console.log('Additional Data Updated %s', helper.toString(couponData));
 
 					channel.ack(msg);
 				})
